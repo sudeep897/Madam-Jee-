@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 18 </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong> 18 ❤️ </strong>
+                        <p>
+                            Padhate padhate thakajaavato hame se bhee baat karliya karo ❤️. 
+ 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+<audio id="background-music" src="1.mp3" autoplay loop>
+Your browser does not support the audio element.
+</audio>
+
+<script>
+window.addEventListener('load', function () {
+  var audio = document.getElementById('background-music');
+  
+  // Attempt to autoplay (some browsers may prevent this)
+  audio.play().catch(function (error) {
+    console.log('Autoplay blocked. Error:', error);
+
+    // Optionally, prompt the user to start the audio manually
+    document.body.addEventListener('click', function() {
+      audio.play();
+    }, { once: true });
+  });
+});
+</script>
+
+</body>
+</html>
